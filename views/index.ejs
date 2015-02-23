@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title> <%= title %></title>
+
+    <!-- Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom CSS -->
+    <link href="css/freelancer.css" rel="stylesheet">
+
+    <!-- Custom Fonts -->
+    <link href="font-awesome-4.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+<body id="page-top" class="index">
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#page-top">청소년을 위한 스트레스 척도</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+<!--
+                    <li class="page-scroll">
+                        <a href="#portfolio">Portfolio</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#about">About</a>
+                    </li>
+-->
+                    <li class="page-scroll">
+                    <a href="#page-top">TOP</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+    <div class="container">
+            <div class="row">
+                <div class="col-lg-12">
+                    <div class="intro-text">
+                     <!--    <span class="name">청소년을 위한 스트레스 척도</span> -->
+                        <span class="skills"><br>안녕하세요? 이 척도는 청소년용 스트레스 검사를 위해 서울대학교 인지과학연구소에서 제작되었습니다. 설문 후 바로 요인별로 스트레스 점수를 확인하실 수 있습니다. 이름, 학교, 학년에 대한 개인정보와 각 문항에 대한 응답결과는 연구목적 외에는 절대 사용되지 않습니다. </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-8 col-lg-offset-2">
+
+                          <div class="col-lg-12">
+                    <h3>1. 먼저 기본 정보를 작성해주세요-!</h3>
+                </div>
+                    <form name="sentMessage" method = "post" action = "/scale" id="contactForm" novalidate>
+
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>이름</label>
+                                <input type="text" name="name" class="form-control" placeholder="name" id="name" required data-validation-required-message="Please enter your name.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>학교 (예: 대한고등학교 또는 민국중학교)</label>
+                                <input type="text" name= "school" class="form-control" placeholder="School" id="email" required data-validation-required-message="Please enter your email address.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+                        <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>학년 (예: 3)</label>
+                                <input type="number" min= "1", max="3", name = "grade" class="form-control" placeholder="Grade" id="phone" required data-validation-required-message="Please enter your phone number.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+
+                             <div class="row control-group">
+                            <div class="form-group col-xs-12 floating-label-form-group controls">
+                                <label>Birthday (예: 2000-12-25)</label>
+                                <input type="text" name = "birthday" class="form-control" placeholder="Birthday" id="date" required data-validation-required-message="Please enter a message.">
+                                <p class="help-block text-danger"></p>
+                            </div>
+                        </div>
+
+         
+                        <br>
+                            <div class="row">
+                <div class="col-lg-12">
+                    <h3>2. 각 문항을 읽고 해당하는 곳을 클릭해주세요-!</h3>
+                </div>
+            </div>
+                        <div class="radio-button-controls">
+                               
+                               <div class="scale_item">1. 부모님이 컴퓨터나 스마트폰 사용을 못하게 하셔서</br> </div>                                                         <input type="radio" id="radio1" name="s1" value="0" checked="">
+                                    <label for="radio1">전혀 스트레스가 아니다</label>
+                                <input type="radio" id="radio2" name="s1" value="1">
+                                   <label for="radio2">스트레스가 아니다</label>
+                                <input type="radio" id="radio3" name="s1" value="2">
+                                   <label for="radio3">스트레스다</label> 
+                                <input type="radio" id="radio4" name="s1" value="3">
+                                   <label for="radio4">매우 스트레스다</label> 
+                                   
+                               <div class="scale_item">2. 집중이 잘 안되고 잡념이 떠올라 집중하기 힘들어서</br> </div>                                                         <input type="radio" id="radio5" name="s2" value="0" checked="">
+                                    <label for="radio5">전혀 스트레스가 아니다</label>
+                                <input type="radio" id="radio6" name="s2" value="1">
+                                   <label for="radio6">스트레스가 아니다</label>
+                                <input type="radio" id="radio7" name="s2" value="2">
+                                   <label for="radio7">스트레스다</label> 
+                                <input type="radio" id="radio8" name="s2" value="3">
+                                   <label for="radio8">매우 스트레스다</label> 
+                                   
+                                <div class="scale_item">3. 부모님이 내게 과도한 관심을 기울이셔서</br> </div>                                                         <input type="radio" id="radio9" name="s3" value="0" checked="">
+                                    <label for="radio9">전혀 스트레스가 아니다</label>
+                                <input type="radio" id="radio10" name="s3" value="1">
+                                   <label for="radio10">스트레스가 아니다</label>
+                                <input type="radio" id="radio11" name="s3" value="2">
+                                   <label for="radio11">스트레스다</label> 
+                                <input type="radio" id="radio12" name="s3" value="3">
+                                   <label for="radio12">매우 스트레스다</label> 
+                                   
+                               <div class="scale_item">4. 선생님(학교, 학원, 과외 선생님 포함)이 SNS에서 내 글에 댓글을 달아주지 않아서</br> </div>                                                         <input type="radio" id="radio13" name="s4" value="0" checked="">
+                                    <label for="radio13">전혀 스트레스가 아니다</label>
+                                <input type="radio" id="radio14" name="s4" value="1">
+                                   <label for="radio14">스트레스가 아니다</label>
+                                <input type="radio" id="radio15" name="s4" value="2">
+                                   <label for="radio15">스트레스다</label> 
+                                <input type="radio" id="radio16" name="s4" value="3">
+                                   <label for="radio16">매우 스트레스다</label> 
+                                   
+                                <div class="scale_item">5. 내가 질병이나 사고로 심하게 아파서 </br> </div>                                                         <input type="radio" id="radio17" name="s5" value="0" checked="">
+                                    <label for="radio17">전혀 스트레스가 아니다</label>
+                                <input type="radio" id="radio18" name="s5" value="1">
+                                   <label for="radio18">스트레스가 아니다</label>
+                                <input type="radio" id="radio19" name="s5" value="2">
+                                   <label for="radio19">스트레스다</label> 
+                                <input type="radio" id="radio20" name="s5" value="3">
+                                   <label for="radio20">매우 스트레스다</label> 
+                                   
+                                <div class="scale_item">6. 친구나 선후배가 괴롭혀서</br> </div>                                                         <input type="radio" id="radio21" name="s6" value="0" checked="">
+                                    <label for="radio21">전혀 스트레스가 아니다</label>
+                                <input type="radio" id="radio22" name="s6" value="1">
+                                   <label for="radio22">스트레스가 아니다</label>
+                                <input type="radio" id="radio23" name="s6" value="2">
+                                   <label for="radio23">스트레스다</label> 
+                                <input type="radio" id="radio24" name="s6" value="3">
+                                   <label for="radio24">매우 스트레스다</label> 
+    
+                                 <div class="scale_item">7. 아버지와 어머니 사이가 좋지 않아서</br> </div>                                                         <input type="radio" id="radio25" name="s7" value="0" checked="">
+                                    <label for="radio25">전혀 스트레스가 아니다</label>
+                                <input type="radio" id="radio26" name="s7" value="1">
+                                   <label for="radio26">스트레스가 아니다</label>
+                                <input type="radio" id="radio27" name="s7" value="2">
+                                   <label for="radio27">스트레스다</label> 
+                                <input type="radio" id="radio28" name="s7" value="3">
+                                   <label for="radio28">매우 스트레스다</label> 
+                                   
+                                <div class="scale_item">8. 친구들이 SNS(카카오톡, 라인, 페이스북 등)에서 내 얘기에 '좋아요'나 댓글을 달아주지 않아서</br> </div>                                                         <input type="radio" id="radio29" name="s8" value="0" checked="">
+                                    <label for="radio29">전혀 스트레스가 아니다</label>
+                                <input type="radio" id="radio30" name="s8" value="1">
+                                   <label for="radio30">스트레스가 아니다</label>
+                                <input type="radio" id="radio31" name="s8" value="2">
+                                   <label for="radio31">스트레스다</label> 
+                                <input type="radio" id="radio32" name="s8" value="3">
+                                   <label for="radio32">매우 스트레스다</label> 
+                                   
+                                <div class="scale_item">9. 친구들을 믿을 수 없어서</br> </div>                                                         <input type="radio" id="radio33" name="s9" value="0" checked="">
+                                    <label for="radio33">전혀 스트레스가 아니다</label>
+                                <input type="radio" id="radio34" name="s9" value="1">
+                                   <label for="radio34">스트레스가 아니다</label>
+                                <input type="radio" id="radio35" name="s9" value="2">
+                                   <label for="radio35">스트레스다</label> 
+                                <input type="radio" id="radio36" name="s9" value="3">
+                                   <label for="radio36">매우 스트레스다</label> 
+                                   
+                               <div class="scale_item">10. 가고싶은 학교에 갈 수 있을지 걱정이 들어서 </br> </div>                                                         <input type="radio" id="radio37" name="s10" value="0" checked="">
+                                    <label for="radio37">전혀 스트레스가 아니다</label>
+                                <input type="radio" id="radio38" name="s10" value="1">
+                                   <label for="radio38">스트레스가 아니다</label>
+                                <input type="radio" id="radio39" name="s10" value="2">
+                                   <label for="radio39">스트레스다</label> 
+                                <input type="radio" id="radio40" name="s10" value="3">
+                                   <label for="radio40">매우 스트레스다</label> 
+                                   
+                                <div class="scale_item">11. 친구들이 PC게임에 초대해주지 않아서</br> </div>                                                         <input type="radio" id="radio41" name="s11" value="0" checked="">
+                                    <label for="radio41">전혀 스트레스가 아니다</label>
+                                <input type="radio" id="radio42" name="s11" value="1">
+                                   <label for="radio42">스트레스가 아니다</label>
+                                <input type="radio" id="radio43" name="s11" value="2">
+                                   <label for="radio43">스트레스다</label> 
+                                <input type="radio" id="radio44" name="s11" value="3">
+                                   <label for="radio44">매우 스트레스다</label> 
+                                   
+                               <div class="scale_item">12. 친구들이 SNS(카카오톡, 라인, 페이스북 등)에서 내 얘기를 무시할 때 </br> </div>                                                         <input type="radio" id="radio45" name="s12" value="0" checked="">
+                                    <label for="radio45">전혀 스트레스가 아니다</label>
+                                <input type="radio" id="radio46" name="s12" value="1">
+                                   <label for="radio46">스트레스가 아니다</label>
+                                <input type="radio" id="radio47" name="s12" value="2">
+                                   <label for="radio47">스트레스다</label> 
+                                <input type="radio" id="radio48" name="s12" value="3">
+                                   <label for="radio48">매우 스트레스다</label> 
+                                   
+                                   <div class="scale_item">13. 시험공부할게 너무 많아서</br> </div>                                                         <input type="radio" id="radio49" name="s13" value="0" checked="">
+                                    <label for="radio49">전혀 스트레스가 아니다</label>
+                                <input type="radio" id="radio50" name="s13" value="1">
+                                   <label for="radio50">스트레스가 아니다</label>
+                                <input type="radio" id="radio51" name="s13" value="2">
+                                   <label for="radio51">스트레스다</label>
+                                <input type="radio" id="radio52" name="s13" value="3">
+                                   <label for="radio52">매우 스트레스다</label> 
+                                   
+                                <div class="scale_item">14. 친구들로부터 따돌림을 당해서</br> </div>                                                         <input type="radio" id="radio53" name="s14" value="0" checked="">
+                                    <label for="radio53">전혀 스트레스가 아니다</label>
+                                <input type="radio" id="radio54" name="s14" value="1">
+                                   <label for="radio54">스트레스가 아니다</label>
+                                <input type="radio" id="radio55" name="s14" value="2">
+                                   <label for="radio55">스트레스다</label> 
+                                <input type="radio" id="radio56" name="s14" value="3">
+                                   <label for="radio56">매우 스트레스다</label> 
+                                   
+                                <div class="scale_item">15. 다른 친구들의 체형,외모,피부가 부러워서</br> </div>                                                         <input type="radio" id="radio57" name="s15" value="0" checked="">
+                                    <label for="radio57">전혀 스트레스가 아니다</label>
+                                <input type="radio" id="radio58" name="s15" value="1">
+                                   <label for="radio58">스트레스가 아니다</label>
+                                <input type="radio" id="radio59" name="s15" value="2">
+                                   <label for="radio59">스트레스다</label> 
+                                <input type="radio" id="radio60" name="s15" value="3">
+                                   <label for="radio60">매우 스트레스다</label> 
+                                   
+                                <div class="scale_item">16. 학업성적 때문에</br> </div>                                                         <input type="radio" id="radio61" name="s16" value="0" checked="">
+                                    <label for="radio61">전혀 스트레스가 아니다</label>
+                                <input type="radio" id="radio62" name="s16" value="1">
+                                   <label for="radio62">스트레스가 아니다</label>
+                                <input type="radio" id="radio63" name="s16" value="2">
+                                   <label for="radio63">스트레스다</label> 
+                                <input type="radio" id="radio64" name="s16" value="3">
+                                   <label for="radio64">매우 스트레스다</label> 
+                                   
+                                <div class="scale_item">17. 입시제도가 불만스러워서</br> </div>                                                         <input type="radio" id="radio65" name="s17" value="0" checked="">
+                                    <label for="radio65">전혀 스트레스가 아니다</label>
+                                <input type="radio" id="radio66" name="s17" value="1">
+                                   <label for="radio66">스트레스가 아니다</label>
+                                <input type="radio" id="radio67" name="s17" value="2">
+                                   <label for="radio67">스트레스다</label> 
+                                <input type="radio" id="radio68" name="s17" value="3">
+                                   <label for="radio68">매우 스트레스다</label> 
+                                   
+                               <div class="scale_item">18. 친구나 선후배의 폭행때문에</br> </div>                                                         <input type="radio" id="radio69" name="s18" value="0" checked="">
+                                    <label for="radio69">전혀 스트레스가 아니다</label>
+                                <input type="radio" id="radio70" name="s18" value="1">
+                                   <label for="radio70">스트레스가 아니다</label>
+                                <input type="radio" id="radio71" name="s18" value="2">
+                                   <label for="radio71">스트레스다</label> 
+                                <input type="radio" id="radio72" name="s18" value="3">
+                                   <label for="radio72">매우 스트레스다</label> 
+    
+                                 <div class="scale_item">19. 선생님(학교, 학원, 과외 선생님 포함)이 SNS에서 친구 신청을 받아주지 않아서</br> </div>                                                         <input type="radio" id="radio73" name="s19" value="0" checked="">
+                                    <label for="radio73">전혀 스트레스가 아니다</label>
+                                <input type="radio" id="radio74" name="s19" value="1">
+                                   <label for="radio74">스트레스가 아니다</label>
+                                <input type="radio" id="radio75" name="s19" value="2">
+                                   <label for="radio75">스트레스다</label> 
+                                <input type="radio" id="radio76" name="s19" value="3">
+                                   <label for="radio76">매우 스트레스다</label> 
+                                   
+                               <div class="scale_item">20. 친한 친구의 배신 또는 절교로 인해</br> </div>                                                         <input type="radio" id="radio77" name="s20" value="0" checked="">
+                                    <label for="radio77">전혀 스트레스가 아니다</label>
+                                <input type="radio" id="radio78" name="s20" value="1">
+                                   <label for="radio78">스트레스가 아니다</label>
+                                <input type="radio" id="radio79" name="s20" value="2">
+                                   <label for="radio79">스트레스다</label> 
+                                <input type="radio" id="radio80" name="s20" value="3">
+                                   <label for="radio80">매우 스트레스다</label> 
+                                   
+                                <div class="scale_item">21. 부모님이 다른 사람과 비교를 하셔서</br> </div>                                                         <input type="radio" id="radio81" name="s21" value="0" checked="">
+                                    <label for="radio81">전혀 스트레스가 아니다</label>
+                                <input type="radio" id="radio82" name="s21" value="1">
+                                   <label for="radio82">스트레스가 아니다</label>
+                                <input type="radio" id="radio83" name="s21" value="2">
+                                   <label for="radio83">스트레스다</label> 
+                                <input type="radio" id="radio84" name="s21" value="3">
+                                   <label for="radio84">매우 스트레스다</label> 
+                                   
+                               <div class="scale_item">22. 내 자신의 학업능력이 의심스러워서</br> </div>                                                         <input type="radio" id="radio85" name="s22" value="0" checked="">
+                                    <label for="radio85">전혀 스트레스가 아니다</label>
+                                <input type="radio" id="radio86" name="s22" value="1">
+                                   <label for="radio86">스트레스가 아니다</label>
+                                <input type="radio" id="radio87" name="s22" value="2">
+                                   <label for="radio87">스트레스다</label> 
+                                <input type="radio" id="radio88" name="s22" value="3">
+                                   <label for="radio88">매우 스트레스다</label> 
+                                   
+                                <div class="scale_item">23. 부모님이나 다른 가족원의 죽음때문에</br> </div>                                                         <input type="radio" id="radio89" name="s23" value="0" checked="">
+                                    <label for="radio89">전혀 스트레스가 아니다</label>
+                                <input type="radio" id="radio90" name="s23" value="1">
+                                   <label for="radio90">스트레스가 아니다</label>
+                                <input type="radio" id="radio91" name="s23" value="2">
+                                   <label for="radio91">스트레스다</label> 
+                                <input type="radio" id="radio92" name="s23" value="3">
+                                   <label for="radio92">매우 스트레스다</label> 
+                                   
+                                <div class="scale_item">24. 이상과 현실의 차가 너무 커서 가치관이 흔들려서</br> </div>                                                         <input type="radio" id="radio93" name="s24" value="0" checked="">
+                                    <label for="radio93">전혀 스트레스가 아니다</label>
+                                <input type="radio" id="radio94" name="s24" value="1">
+                                   <label for="radio94">스트레스가 아니다</label>
+                                <input type="radio" id="radio95" name="s24" value="2">
+                                   <label for="radio95">스트레스다</label> 
+                                <input type="radio" id="radio96" name="s24" value="3">
+                                   <label for="radio96">매우 스트레스다</label> 
+                              
+                                <div class="scale_item">25. 컴퓨터나  SNS(카카오톡, 라인, 페이스북 등)에서 원하지 않는 정보(광고, 연예인 얘기, 야동 등)를 받게되서</br> </div>                                                         <input type="radio" id="radio97" name="s25" value="0" checked="">
+                                    <label for="radio97">전혀 스트레스가 아니다</label>
+                                <input type="radio" id="radio98" name="s25" value="1">
+                                   <label for="radio98">스트레스가 아니다</label>
+                                <input type="radio" id="radio99" name="s25" value="2">
+                                   <label for="radio99">스트레스다</label> 
+                                <input type="radio" id="radio100" name="s25" value="3">
+                                   <label for="radio100">매우 스트레스다</label>                          
+                                </div>
+                        <div id="success"></div>
+                        <div class="row">
+                            <div class="scale_item">
+                                <button type="submit" class="btn btn-success btn-lg">Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="footer-above">
+            <div class="container">
+                <div class="row">
+              <div class="footer-col col-md-4">
+                        <h3>주관연구기관</h3>
+                        <p>서울대학교 인지과학연구소  & <br>
+                        Functional Brain Imaging lab.<br>서울특별시 관악구 관악로 1 서울대학교</p>
+                    </div>
+
+                       <div class="footer-col col-md-4">
+                        <h3>협동연구기관</h3>
+                        <p>알브레인<br>!!주소 입력 확인!!!</p>
+                    </div>
+                      
+                    <div class="footer-col col-md-4">
+                        <h3>설문관련 문의</h3>
+                        <p>설문 및 분석에 대해 궁금한 점이 있으시면 <a href="mailto:hyeyeoun.joo@gmail.com">담당자 메일</a>로 연락주십시오.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer-below">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-12">
+                        Copyright &copy; 서울대학교 인지과학연구소 2015
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+    <div class="scroll-top page-scroll visible-xs visble-sm">
+        <a class="btn btn-primary" href="#page-top">
+            <i class="fa fa-chevron-up"></i>
+        </a>
+    </div>
+
+       <!-- jQuery -->
+    <script src="js/jquery.js"></script>
+
+    <!-- Bootstrap Core JavaScript -->
+    <script src="js/bootstrap.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+    <script src="js/classie.js"></script>
+    <script src="js/cbpAnimatedHeader.js"></script>
+    <script src="js/jqBootstrapValidation.js"></script>
+
+    <script src="js/freelancer.js"></script>
+
+    
+</body>
+
+</html>
